@@ -52,7 +52,7 @@ export default function Sidebar({
             <Center fontSize="2.5rem">
               <VscActivateBreakpoints />
             </Center>
-            {expanded && (
+            {isExpanded && (
               <>
                 <Center ml={2} fontWeight="bold">
                   Dashboard
@@ -67,7 +67,7 @@ export default function Sidebar({
         <Menu expanded={isExpanded} />
         <Box>
           <Button w="100%" borderRadius={0} onClick={toggleSidebarMenuMode}>
-            {expanded ? <ArrowLeftIcon /> : <ArrowRightIcon />}
+            {isExpanded ? <ArrowLeftIcon /> : <ArrowRightIcon />}
           </Button>
         </Box>
       </Box>

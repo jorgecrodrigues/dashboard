@@ -5,17 +5,18 @@ import Sidebar from "./shared/components/Sidebar";
 import { ColorModeSwitcher } from "./shared/components/ColorModeSwitcher";
 import { sidebarMenuModeStorageManager } from "./storage-manager";
 
+// Pages
 const Home = lazy(() => import("./features/Home"));
 const Dashboard = lazy(() => import("./features/Dashboard"));
 const About = lazy(() => import("./features/About"));
+// Storage Manager
+const sidebarMenuMode = sidebarMenuModeStorageManager.get("expanded");
 
 export const App = () => {
   const [
     sidebarWidthDimension,
     setSidebarWidthDimension,
   ] = React.useState<number>(0);
-
-  const sidebarMenuMode = sidebarMenuModeStorageManager.get("expanded");
 
   return (
     <ChakraProvider theme={theme}>
